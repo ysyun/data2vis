@@ -1,1 +1,1 @@
-{"num3": "2.87", "dnum2": "2.87", "num2": "2329.68", "num0": "11.43", "num4": "29.35"}
+{"num0": "92", "str0": "R on L", "num1": "173", "str1": "Some", "str2": "Left", "num2": "18.25", "Nstr3": "18", "str3": "Right", "num4": "18.5", "str4": "Metric", "str5": "Never", "str6": "Female"}

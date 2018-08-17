@@ -30,6 +30,11 @@ from seq2seq.data import input_pipeline
 from seq2seq.inference import create_inference_graph
 from seq2seq.training import utils as training_utils
 
+# import os
+# os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+import warnings
+warnings.filterwarnings("ignore", message="numpy.dtype size changed, may indicate binary incompatibility.")
+
 try:
     from json.decoder import JSONDecodeError
 except ImportError:
@@ -63,6 +68,7 @@ input_pipeline_dict = {
     }
 }
 
+# model_dir is "viszmodel"
 model_dir_input = ARGS.model_dir
 
 input_task_list = [{'class': 'DecodeText', 'params': {'delimiter': ''}}]
@@ -148,8 +154,9 @@ predictions, _, _ = create_inference_graph(
 
 graph = tf.get_default_graph()
 
-
 # Function to run inference.
+
+
 def run_inference():
     # tf.reset_default_graph()
     with graph.as_default():
@@ -177,6 +184,7 @@ def examplesdata():
     f_names = data_utils.generate_field_types(source_data)
     data_utils.forward_norm(source_data, destination_file, f_names)
 
+    print('>>>> call inference')
     run_inference()
 
     # Perform post processing - backward normalization
@@ -186,11 +194,13 @@ def examplesdata():
     #     decoded_post_array.append(decoded_post)
 
     decoded_string_post = data_utils.backward_norm(decoded_string[0], f_names)
+    print('>>>> vega spec', decoded_string_post)
 
     try:
         vega_spec = json.loads(decoded_string_post)
         vega_spec["data"] = {"values": source_data}
         response_payload = {"vegaspec": vega_spec, "status": True}
+        print('>>>> response', response_payload)
     except JSONDecodeError as e:
         response_payload = {
             "status": False,

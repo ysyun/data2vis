@@ -229,8 +229,8 @@ class Seq2SeqModel(ModelBase):
       features["source_ids"] = tf.reverse_sequence(
           input=features["source_ids"],
           seq_lengths=features["source_len"],
-          seq_dim=1,
-          batch_dim=0,
+          seq_axis=1,
+          batch_axis=0,
           name=None)
 
     features["source_len"] = tf.to_int32(features["source_len"])

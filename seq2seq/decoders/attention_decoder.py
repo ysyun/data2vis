@@ -170,8 +170,8 @@ class AttentionDecoder(RNNDecoder):
       attention_scores = tf.reverse_sequence(
           input=attention_scores,
           seq_lengths=self.reverse_scores_lengths,
-          seq_dim=1,
-          batch_dim=0)
+          seq_axis=1,
+          batch_axis=0)
 
     sample_ids = self.helper.sample(
         time=time_, outputs=logits, state=cell_state)

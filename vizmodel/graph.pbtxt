@@ -19469,13 +19469,13 @@ node {
     }
   }
   attr {
-    key: "batch_dim"
+    key: "batch_axis"
     value {
       i: 0
     }
   }
   attr {
-    key: "seq_dim"
+    key: "seq_axis"
     value {
       i: 1
     }
@@ -28182,13 +28182,13 @@ node {
     }
   }
   attr {
-    key: "batch_dim"
+    key: "batch_axis"
     value {
       i: 0
     }
   }
   attr {
-    key: "seq_dim"
+    key: "seq_axis"
     value {
       i: 1
     }
@@ -75475,13 +75475,13 @@ node {
     }
   }
   attr {
-    key: "batch_dim"
+    key: "batch_axis"
     value {
       i: 0
     }
   }
   attr {
-    key: "seq_dim"
+    key: "seq_axis"
     value {
       i: 1
     }
@@ -114282,13 +114282,13 @@ node {
     }
   }
   attr {
-    key: "batch_dim"
+    key: "batch_axis"
     value {
       i: 0
     }
   }
   attr {
-    key: "seq_dim"
+    key: "seq_axis"
     value {
       i: 1
     }

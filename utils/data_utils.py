@@ -548,7 +548,8 @@ def forward_norm(source_data, destination_file, f_names):
         return False
 
     # Write normalized JSON to file for seq2seq model
-    # print("Writing data to file:", source_data_first_sample)
+    print("************ destination file:", destination_file)
+    print("************ Writing data to file:", source_data_first_sample)
     write_data_to_file(destination_file, source_data_first_sample)
     # with open(destination_file, 'w') as source_data_file:
     #     json.dump(source_data_first_sample, source_data_file)
