@@ -1,35 +1,6 @@
 {
     "model_class": "AttentionSeq2Seq",
     "model_params": {
-        "optimizer.name": "Adam",
-        "decoder.class": "seq2seq.decoders.AttentionDecoder",
-        "inference.beam_search.beam_width": 5,
-        "decoder.params": {
-            "rnn_cell": {
-                "dropout_input_keep_prob": 0.5,
-                "num_layers": 2,
-                "cell_params": {
-                    "num_units": 512
-                },
-                "dropout_output_keep_prob": 1.0,
-                "cell_class": "LSTMCell"
-            },
-            "max_decode_length": 2000
-        },
-        "optimizer.learning_rate": 0.0001,
-        "source.reverse": false,
-        "source.max_seq_len": 500,
-        "attention.params": {
-            "num_units": 512
-        },
-        "attention.class": "seq2seq.decoders.attention.AttentionLayerDot",
-        "vocab_target": "sourcedata/vocab.target",
-        "target.max_seq_len": 500,
-        "optimizer.params": {
-            "epsilon": 8e-07
-        },
-        "bridge.class": "seq2seq.models.bridges.ZeroBridge",
-        "vocab_source": "sourcedata/vocab.source",
         "encoder.params": {
             "rnn_cell": {
                 "dropout_input_keep_prob": 0.5,
@@ -42,6 +13,37 @@
             }
         },
         "encoder.class": "seq2seq.encoders.BidirectionalRNNEncoder",
-        "embedding.dim": 512
+        "decoder.params": {
+            "rnn_cell": {
+                "dropout_input_keep_prob": 0.5,
+                "num_layers": 2,
+                "cell_params": {
+                    "num_units": 512
+                },
+                "dropout_output_keep_prob": 1.0,
+                "cell_class": "LSTMCell"
+            },
+            "max_decode_length": 2000
+        },
+        "decoder.class": "seq2seq.decoders.AttentionDecoder",
+        "inference.beam_search.beam_width": 5,
+        "attention.params": {
+            "num_units": 512
+        },
+        "attention.class": "seq2seq.decoders.attention.AttentionLayerDot",
+        "bridge.class": "seq2seq.models.bridges.ZeroBridge",
+        "embedding.dim": 512,
+
+        "optimizer.name": "Adam",
+        "optimizer.learning_rate": 0.0001,
+        "optimizer.params": {
+            "epsilon": 8e-07
+        },
+
+        "source.reverse": false,
+        "source.max_seq_len": 500,
+        "vocab_source": "sourcedata/vocab.source",
+        "vocab_target": "sourcedata/vocab.target",
+        "target.max_seq_len": 500
     }
 }

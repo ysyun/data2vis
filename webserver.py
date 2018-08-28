@@ -184,7 +184,8 @@ def examplesdata():
     f_names = data_utils.generate_field_types(source_data)
     data_utils.forward_norm(source_data, destination_file, f_names)
 
-    print('>>>> call inference')
+    print('1 >>>>')
+    print('source data: ', source_data)
     run_inference()
 
     # Perform post processing - backward normalization
@@ -194,13 +195,16 @@ def examplesdata():
     #     decoded_post_array.append(decoded_post)
 
     decoded_string_post = data_utils.backward_norm(decoded_string[0], f_names)
-    print('>>>> vega spec', decoded_string_post)
+    print('2 >>>>')
+    print('f_names: ', f_names)
+    print('decoded string post: ', decoded_string_post)
 
     try:
         vega_spec = json.loads(decoded_string_post)
         vega_spec["data"] = {"values": source_data}
         response_payload = {"vegaspec": vega_spec, "status": True}
-        print('>>>> response', response_payload)
+        print('3 >>>>')
+        print('response: ', response_payload)
     except JSONDecodeError as e:
         response_payload = {
             "status": False,

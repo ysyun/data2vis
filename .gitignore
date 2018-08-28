@@ -32,6 +32,7 @@ modelbackup
 *.pdf
 test.txt
 vizmodel/train_options.json
+vizmodel-small/*
 *.Rhistory
 .vscode
 *vscode

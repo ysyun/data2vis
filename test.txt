@@ -1,1 +1,1 @@
-{"num0": "92", "str0": "R on L", "num1": "173", "str1": "Some", "str2": "Left", "num2": "18.25", "Nstr3": "18", "str3": "Right", "num4": "18.5", "str4": "Metric", "str5": "Never", "str6": "Female"}
+{"num0": "1", "num1": "0", "num2": "1", "num3": "1"}
