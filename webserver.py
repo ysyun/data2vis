@@ -124,6 +124,7 @@ def _handle_attention(attention_scores):
 
 
 def _save_prediction_to_dict(output_string):
+    # http://bcho.tistory.com/1173
     global decoded_string
     decoded_string = output_string
 
