@@ -175,7 +175,7 @@ def run_inference():
         with tf.train.MonitoredSession(
                 session_creator=session_creator, hooks=hooks) as sess:
             sess.run([])
-        # print(" ****** decoded string ", decoded_string)
+        print(" ****** decoded string ", decoded_string)
         return decoded_string
 
 
@@ -185,7 +185,7 @@ def examplesdata():
     f_names = data_utils.generate_field_types(source_data)
     data_utils.forward_norm(source_data, destination_file, f_names)
 
-    print('1 >>>>')
+    print('>>>> 1: ')
     print('source data: ', source_data)
     run_inference()
 
@@ -196,7 +196,7 @@ def examplesdata():
     #     decoded_post_array.append(decoded_post)
 
     decoded_string_post = data_utils.backward_norm(decoded_string[0], f_names)
-    print('2 >>>>')
+    print('>>>> 2: ')
     print('f_names: ', f_names)
     print('decoded string post: ', decoded_string_post)
 
@@ -204,13 +204,13 @@ def examplesdata():
         vega_spec = json.loads(decoded_string_post)
         vega_spec["data"] = {"values": source_data}
         response_payload = {"vegaspec": vega_spec, "status": True}
-        print('3 >>>>')
+        print('>>>> 3: ')
         print('response: ', response_payload)
     except JSONDecodeError as e:
         response_payload = {
             "status": False,
             "reason": "Model did not produce a valid vegalite JSON",
-            "vegaspec": decoded_string
+            "vegaspec": decoded_string[0]
         }
     return jsonify(response_payload)
 

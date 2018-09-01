@@ -1,7 +1,7 @@
 export DATA_DIR=.
 python -m bin.train \
   --config_paths="
-      $DATA_DIR/example_configs/$1.yml,
+      $DATA_DIR/example_configs/nmt_$1.yml,
       $DATA_DIR/example_configs/train_seq2seq.yml,
       $DATA_DIR/example_configs/text_metrics_bpe.yml" \
   --model_params "
@@ -27,4 +27,4 @@ python -m bin.train \
         - $DATA_DIR/sourcedata/dev.targets" \
   --batch_size 32 \
   --train_steps 100000 \
-  --output_dir $DATA_DIR/$2
+  --output_dir $DATA_DIR/vizmodel-$1
