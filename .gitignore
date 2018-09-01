@@ -33,6 +33,7 @@ modelbackup
 test.txt
 vizmodel/train_options.json
 vizmodel-small/*
+vizmodel*/*
 *.Rhistory
 .vscode
 *vscode
