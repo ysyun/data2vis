@@ -1,0 +1,31 @@
+{
+    "encoding": {
+        "color": {
+            "type": "temporal",
+            "timeUnit": "year",
+            "field": "str1"
+        },
+        "x": {
+            "type": "quantitative",
+            "field": "num3",
+            "bin": true
+        },
+        "y": {
+            "aggregate": "count",
+            "field": "*",
+            "type": "quantitative"
+        }
+    },
+    "mark": "circle",
+    "data": [{
+        "str0": "saab 900s",
+        "num0": 121,
+        "num1": 2800,
+        "num2": 110,
+        "num3": 15.4,
+        "num4": null,
+        "num5": 4,
+        "str1": "1982-01-01",
+        "str2": "Europe"
+    }]
+}

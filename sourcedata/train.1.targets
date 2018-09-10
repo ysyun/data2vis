@@ -1,0 +1,4 @@
+{"encoding": {"color": {"type": "temporal", "timeUnit": "year", "field": "str1"}, "x": {"type": "quantitative", "field": "num3", "bin": true}, "y": {"aggregate": "count", "field": "*", "type": "quantitative"}}, "mark": "circle"}
+{"encoding": {"detail": {"type": "ordinal", "selected": true, "field": "num2", "primitiveType": "integer"}, "x": {"type": "quantitative", "field": "num0", "bin": true}, "y": {"aggregate": "count", "field": "*", "type": "quantitative"}}, "mark": "point"}
+{"encoding": {"y": {"type": "quantitative", "field": "num8", "aggregate": "mean"}, "x": {"field": "num7", "type": "ordinal", "selected": true, "primitiveType": "integer"}}, "mark": "line"}
+{"encoding": {"color": {"type": "quantitative", "field": "num8", "bin": true}, "x": {"field": "num3", "type": "ordinal", "selected": true, "primitiveType": "integer"}, "y": {"aggregate": "count", "field": "*", "type": "quantitative"}}, "mark": "bar"}

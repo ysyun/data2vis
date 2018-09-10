@@ -1,0 +1,4 @@
+{"encoding": {"detail": {"type": "ordinal", "selected": true, "field": "num5", "primitiveType": "integer"}, "x": {"aggregate": "count", "field": "*", "type": "quantitative"}, "y": {"type": "quantitative", "field": "num2", "bin": true}}, "mark": "point"}
+{"encoding": {"y": {"field": "num0", "type": "ordinal", "selected": true, "primitiveType": "integer"}, "x": {"type": "quantitative", "field": "num18"}}, "mark": "tick"}
+{"encoding": {"y": {"type": "quantitative", "field": "num0", "bin": true}, "x": {"aggregate": "count", "field": "*", "type": "quantitative"}}, "mark": "bar"}
+{"encoding": {"detail": {"type": "ordinal", "selected": true, "field": "num9", "primitiveType": "integer"}, "x": {"type": "quantitative", "field": "num8", "bin": true}, "y": {"aggregate": "count", "field": "*", "type": "quantitative"}}, "mark": "area"}
