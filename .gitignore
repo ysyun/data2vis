@@ -28,6 +28,7 @@ modelbackup
 **/*.zip
 *.pyc
 *.RHistory
+**/*.csv
 
 *.pdf
 test.txt

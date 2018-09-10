@@ -1,0 +1,42 @@
+{
+    "data": {
+        "url": "data/mydata/step_point.json"
+    },
+    "width": 400,
+    "height": 100,
+    "mark": "tick",
+    "encoding": {
+        "y": {
+            "field": "step",
+            "type": "nominal",
+            "scale": {
+                "rangeStep": 12
+            }
+        },
+        "x": {
+            "field": "count",
+            "type": "quantitative",
+            "scale": {}
+        },
+        "color": {
+            "field": "step",
+            "type": "nominal"
+        },
+        "row": {
+            "field": "wafer",
+            "type": "nominal"
+        },
+        "size": {
+            "field": "point",
+            "type": "quantitative"
+        }
+    },
+    "config": {
+        "line": {
+            "point": true
+        },
+        "scale": {
+            "useUnaggregatedDomain": true
+        }
+    }
+}

@@ -1,0 +1,75 @@
+{
+    "data": {
+        "url": "data/mydata/step_point.json"
+    },
+    "vconcat": [{
+            "width": 400,
+            "mark": "circle",
+            "selection": {
+                "brush": {
+                    "type": "interval",
+                    "encodings": [
+                        "x"
+                    ]
+                }
+            },
+            "encoding": {
+                "x": {
+                    "field": "count",
+                    "type": "quantitative",
+                    "scale": {},
+                    "axis": {
+                        "title": "idx"
+                    }
+                },
+                "y": {
+                    "field": "point",
+                    "type": "quantitative"
+                },
+                "color": {
+                    "field": "step",
+                    "type": "nominal"
+                },
+                "shape": {
+                    "field": "wafer",
+                    "type": "nominal"
+                }
+            }
+        },
+        {
+            "width": 400,
+            "mark": "circle",
+            "transform": [{
+                "filter": {
+                    "selection": "brush"
+                }
+            }],
+            "encoding": {
+                "x": {
+                    "field": "count",
+                    "type": "quantitative",
+                    "scale": {},
+                    "axis": {
+                        "title": "idx"
+                    }
+                },
+                "y": {
+                    "field": "step",
+                    "type": "quantitative"
+                },
+                "color": {
+                    "field": "step",
+                    "type": "nominal"
+                }
+            }
+        }
+    ],
+    "config": {
+        "line": {
+            "point": true
+        },
+        "scale": {
+            "useUnaggregatedDomain": true
+        }
+    }
+}

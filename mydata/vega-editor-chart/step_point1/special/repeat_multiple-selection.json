@@ -1,0 +1,56 @@
+{
+    "data": {
+        "url": "data/mydata/step_point.json"
+    },
+    "repeat": {
+        "row": [
+            "point",
+            "step",
+            "count"
+        ],
+        "column": [
+            "count",
+            "step",
+            "point"
+        ]
+    },
+    "spec": {
+        "selection": {
+            "brush": {
+                "type": "interval",
+                "resolve": "global"
+            }
+        },
+        "mark": "point",
+        "encoding": {
+            "x": {
+                "field": {
+                    "repeat": "column"
+                },
+                "type": "quantitative"
+            },
+            "y": {
+                "field": {
+                    "repeat": "row"
+                },
+                "type": "quantitative"
+            },
+            "color": {
+                "condition": {
+                    "selection": "brush",
+                    "field": "step",
+                    "type": "nominal"
+                },
+                "value": "grey"
+            }
+        }
+    },
+    "config": {
+        "line": {
+            "point": true
+        },
+        "scale": {
+            "useUnaggregatedDomain": true
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "data": {
+        "url": "data/mydata/step_point.json"
+    },
+    "width": 400,
+    "mark": "circle",
+    "encoding": {
+        "x": {
+            "field": "count",
+            "type": "quantitative",
+            "scale": {},
+            "axis": {
+                "title": "idx"
+            }
+        },
+        "y": {
+            "field": "point",
+            "type": "quantitative"
+        },
+        "color": {
+            "field": "step",
+            "type": "nominal"
+        },
+        "shape": {
+            "field": "wafer",
+            "type": "nominal"
+        },
+        "row": {
+            "field": "recipe",
+            "type": "nominal"
+        }
+    },
+    "config": {
+        "line": {
+            "point": true
+        },
+        "scale": {
+            "useUnaggregatedDomain": true
+        }
+    }
+}
