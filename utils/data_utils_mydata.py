@@ -18,7 +18,7 @@ examples_directory = "mydata/examples"
 vl_data_filename = "mydata/examples/vldata.json"
 test_dataset_directory = "mydata/testdata"
 
-test_data_list = "testdata/tdatalsit.json"
+test_data_list = "mydata/testdata/tdatalsit.json"
 
 train_data_output_directory = "mydata/sourcedata"
 max_file_size = 1219853
