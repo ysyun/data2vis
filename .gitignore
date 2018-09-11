@@ -37,3 +37,5 @@ vizmodel/train_options.json
 *.Rhistory
 .vscode
 *vscode
+
+test.txt
