@@ -1,1 +1,1 @@
-{"num0": "3", "num1": "1", "num2": "1979", "num3": "1"}
+{"num0": "16", "num1": "315", "str0": "AFC", "num2": "0", "num3": "75", "num4": "589", "str1": "ACE", "num5": "274", "num6": "1", "str2": "New England Patriots"}
