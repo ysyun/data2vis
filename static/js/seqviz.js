@@ -12,10 +12,10 @@ $(function () {
 
 
     var exampleProgressBarColor = "#152934"
-    var numExampleGraphsPerRow = 10
+    var numExampleGraphsPerRow = 10;
     // Assign the specification to a local variable vlSpec.
     var exampleGraphWidth = 150
-    var exampleGraphHeight = 100;
+    var exampleGraphHeight = 200;
 
     var loadDuration = 5000;
     var firstLoad = false
@@ -298,13 +298,15 @@ $(function () {
 
 
     function loadExampleVisualization(vlSpec) {
-        exampleGraphWidth = ($(".examplebox").width()) / numExampleGraphsPerRow;
+        // exampleGraphWidth = ($(".examplebox").width()) / numExampleGraphsPerRow;
+        exampleGraphWidth = ($(".examplebox").width())/1.3;
         loadStatus = loadeddivcount + " / " + numGraphs
         progressBarWidth = (loadeddivcount / numGraphs) * $(".exampleprogresbarouter").width()
         $(".exampleprogressbarinner").width(progressBarWidth)
         $(".examplesStatus").text(loadStatus)
         vlSpec.width = exampleGraphWidth
         vlSpec.height = exampleGraphHeight
+        // vlSpec.height = 500;
         var opt = {
             "mode": "vega-lite",
             "actions": false,
