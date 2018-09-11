@@ -5,8 +5,8 @@
 $(function () {
     var exampleProgressBarColor = "#152934"
     // Assign the specification to a local variable vlSpec.
-    var exampleGraphWidth = ($(".examplebox").width()) / 6;
-    var exampleGraphHeight = 250;
+    var exampleGraphWidth = ($(".examplebox").width()) / 2;
+    var exampleGraphHeight = 400;
 
     var loadDuration = 5000;
     var firstLoad = false
