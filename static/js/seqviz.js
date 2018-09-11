@@ -226,8 +226,12 @@ $(function () {
         tooltip = containsPhantom ? "Phantom field generated." : "No Phantom field."
 
         exampleGraphWidth = 150
-        vlSpec.width = exampleGraphWidth
-        vlSpec.height = exampleGraphHeight
+        if (!vlSpec.width) {
+            vlSpec.width = exampleGraphWidth
+        }
+        if (!vlSpec.height) {
+            vlSpec.height = exampleGraphHeight
+        }
         var opt = {
             "mode": "vega-lite",
             "actions": true,
